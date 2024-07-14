@@ -1,5 +1,6 @@
 resource "azuread_application_registration" "oidc" {
   display_name = coalesce(var.application_name, var.github_repository)
+  description  = "OIDC for ${var.github_repository} GitHub repository."
 }
 
 resource "azuread_application_federated_identity_credential" "oidc" {
