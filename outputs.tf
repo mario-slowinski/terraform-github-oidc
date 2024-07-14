@@ -1,6 +1,6 @@
-output "client_id" {
-  value       = azuread_application_registration.oidc.client_id
-  description = "Azure AD application client_id."
+output "application" {
+  value       = azuread_application_registration.oidc
+  description = "Azure AD application object."
   sensitive   = false
 }
 
